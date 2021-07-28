@@ -14,7 +14,7 @@ class UrlController {
 
             return res.status(200).json({
                 error: false,
-                message: req.body,
+                data
             })
         })
     }
@@ -22,6 +22,14 @@ class UrlController {
     async findUrl (req, res) {
         const shortUrls = await urlSchema.findOne({shortUrl: req.params.shortUrl})
         res.redirect(shortUrls.originalUrl)
+    }
+
+    async findAll (req, res) {
+        const shortUrls = await urlSchema.find()
+        return res.status(200).json({
+            error: false,
+            shortUrls
+        })
     }
 }
 
