@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const db = 'mongodb+srv://mateus:mv123456@cluster0.a28pl.mongodb.net/url-short?retryWrites=true&w=majority'
+const PASSWORD = "mv123456"
+const db = `mongodb+srv://mateus:${PASSWORD}@cluster0.a28pl.mongodb.net/url-short?retryWrites=true&w=majority`
 
 const connection = async () => {
     try {

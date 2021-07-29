@@ -1,10 +1,13 @@
 
-const urlSchema = require('../models/original_url')
+const urlSchema = require('../models/urlSchema')
+const shortId = require('shortid')
 
 class UrlController {
     async saveNewUrl(req, res) {
-        const {originalUrl, shortUrl} = req.body
+        const {originalUrl} = req.body
+        const shortUrl =  shortId.generate()
         const data = {originalUrl, shortUrl}
+        const USER_URL = `https://usapim.herokuapp.com/${shortUrl}`
         await urlSchema.create(data, (error) => {
             if(error)
             return res.status(400).json({
@@ -14,7 +17,7 @@ class UrlController {
 
             return res.status(200).json({
                 error: false,
-                data
+                USER_URL
             })
         })
     }
@@ -22,14 +25,6 @@ class UrlController {
     async findUrl (req, res) {
         const shortUrls = await urlSchema.findOne({shortUrl: req.params.shortUrl})
         res.redirect(shortUrls.originalUrl)
-    }
-
-    async findAll (req, res) {
-        const shortUrls = await urlSchema.find()
-        return res.status(200).json({
-            error: false,
-            shortUrls
-        })
     }
 }
 
