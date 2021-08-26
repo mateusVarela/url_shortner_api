@@ -10,7 +10,7 @@
 
 ## 🎯 DESAFIO
 
-Aqui o desafio foi proposto pela **[FW7](https://github.com/fw7-solucoes)** e deveria funcionar da seguinte maneira: o usuário poderá colocar uma URL copiada de um navegador e em seguida, será retornado um link minificado que vai redirecionar para o link original.
+Aqui o desafio foi proposto pela **[FW7](https://github.com/fw7-solucoes)** e deveria funcionar da seguinte maneira: o usuário poderá colocar uma URL copiada de um navegador e em seguida, será retornado um link minificado que quando usado vai redirecionar para o link original.
 
 Existe também o repositório do front-end que complementa essa aplicação, lá também é possível testar todas as funcionalidades deste projeto. Caso tenha interesse em ver como ficou, esse é o **[Repositório](https://github.com/mateusVarela/url_shortner)**.
 
