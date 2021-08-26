@@ -16,7 +16,7 @@ Existe também o repositório do front-end que complementa essa aplicação, lá
 
 ✅ CA
 - Salvar link **original**.
-- Criar link para **redirecionar** usuário*.
+- Criar link para **redirecionar** usuário.
 - Retornar link **minificado** para o usuário.
 - **Redirecionar** para página original quando usar o link minificado.
 
