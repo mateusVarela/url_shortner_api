@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const PASSWORD = "mv123456"
-const db = `mongodb+srv://mateus:${PASSWORD}@cluster0.a28pl.mongodb.net/url-short?retryWrites=true&w=majority`
+require('dotenv').config();
+const db = `mongodb+srv://mateus:${process.env.mongo_pass}@cluster0.a28pl.mongodb.net/url-short?retryWrites=true&w=majority`
 
 const connection = async () => {
     try {
